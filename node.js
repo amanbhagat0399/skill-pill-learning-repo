@@ -8,12 +8,12 @@
       alert("Please enter your Name , Nme can't be blank");
 
     }
-    else if ((email.indexOf('@') == -1) ||  (email.indexOf(".") == -1 )) 
+    else if ((email.indexOf('@') == -1) ||  (email.slice(email.indexOf("@"), email.length).indexOf(".") == -1 )) 
     {
         alert("Invalid Email");
     }
 
-    else if (String(phone).length< 10) 
+    else if ( String(phone).length< 10) 
     {
       alert("Phone number should only contain digits and it must contain 10 digits ");
     }
