@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,35 +8,53 @@
   <script type="text/javascript" src="node.js"></script>
   <title>Contact Form</title>
 </head>
+
 <body>
   <div>
     <h1>Contact Form</h1>
     <h2>Fill Your Details Below</h2>
   </div>
-  <form action="">
-    <ul>
-      <li>
-     <label for="fname">Name :</label>
-     <input type="text" id="fname" name="fname" placeholder="First Name" onkeyup="lettersonly(this)" >
-     <label for="lname"></label>
-     <input type="text" id="lname" name="lname" placeholder="Last Name" onkeyup="lettersonly(this)">
-      </li>
-     <li>
-       <label for="mail">E-mail:</label>
-       <input type="email" id="mail"  placeholder="Something@something.com">
-     </li>
-     <li>
-       <label for="phone">Phone No:</label>
-       <input type="tel"  id = "phone"  maxlength="10"  minlength="10" placeholder="9876543210"  onkeyup="numbersonly(this)">  
-     </li>
-     <li>
-       <label for="msg">Message:</label>
-       <textarea id="msg" name="user_message"></textarea>
-     </li>
-     <li class="button">
-      <button type="submit" onclick="message_submit()">Send your message</button>
-    </li>
-    </ul>
-   </form>
+  <form>
+    <div class="row">
+      <div class="left">
+        <label for="fname">Name :</label>
+      </div>
+      <div class="right">
+        <input type="text" id="fname" name="fname" placeholder="First Name" onkeyup="lettersonly(this)">
+        <label for="lname"></label>
+        <input type="text" id="lname" name="lname" placeholder="Last Name" onkeyup="lettersonly(this)">
+      </div>
+    </div>
+    <div class="row">
+      <div class="left">
+        <label for="mail">E-mail:</label>
+      </div>
+      <div class="right">
+        <input type="email" id="mail" placeholder="Something@something.com">
+      </div>
+    </div>
+    <div class="row">
+      <div class="left">
+        <label for="phone">Phone No:</label>
+      </div>
+      <div class="right">
+        <input type="tel" id="phone" maxlength="10" minlength="10" placeholder="9876543210" onkeyup="numbersonly(this)">
+      </div>
+    </div>
+    <div class="row">
+      <div class="left">
+        <label for="msg">Message:</label>
+      </div>
+      <div class="right">
+        <textarea id="msg" name="user_message"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="button">
+        <button type="submit" onclick="message_submit()">Send your message</button>
+      </div>
+    </div>
+  </form>
 </body>
+
 </html>

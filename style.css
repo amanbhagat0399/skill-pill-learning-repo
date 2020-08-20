@@ -1,3 +1,4 @@
+
 h2 {text-align: center;
   color: aliceblue;
 }
@@ -5,15 +6,27 @@ h2 {text-align: center;
 h1 {text-align: center;
   color: aliceblue;
 }
+*{
+  box-sizing: border-box;
+}
 
+label{
+
+  display: inline-block;
+}
 body{
-  background-color: rgb(151, 19, 19);
+  background-color: rgb(105, 4, 4);
+  box-sizing: border-box;
+  border-block-width: 2px ;
+  width: 100% ;
+
+  
 }
 
 form {
   /* Center the form on the page */
   margin: 0 auto;
-  width: 400px;
+  width: 50%;
   /* Form outline */
   padding: 2em;
   border: 1px solid #CCC;
@@ -21,41 +34,55 @@ form {
   background-color: rgb(238, 237, 237);
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.left {
+  float: left;
+  width: 25%;
+  margin-top: 4px;
+
+}
+.right{
+  float: left
+  ;
+  width:75%;
+  margin-top: 4px;
 }
 
-form li + li {
-  margin-top: 1em;
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-label {
-  /* Uniform size & alignment */
+#fname {
+  /* display: inline-block;  */
   display: inline-flex;
-  width: 90px;
-  text-align: center;
-}
-#fname, #lname {
-  display: inline-block;
-  width: 100px;
-  box-sizing: border-box;
-
+  width: 40%;
+  float: left;
 }
 
+#lname{
+  /* display: inline-block;  */
+  display: inline-flex;
+  width: 40%;
+  float:right;
+}
 input, 
 textarea {
   /* To make sure that all text fields have the same font settings
      By default, textareas have a monospace font */
   font: 1em sans-serif;
 
-  /* Uniform text field size */
-  width: 300px;
-  box-sizing: border-box;
 
-  /* Match form field borders */
-  border: 1px solid #999;
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  resize: vertical;
+
+  /* Uniform text field size */
+  box-sizing:border-box;
+
 }
 
 input:focus, 
@@ -69,16 +96,21 @@ textarea {
   vertical-align: top;
 
   /* Provide space to type some text */
-  height: 5em;
+  height: 3em;
 }
 
-.button {
-  /* Align buttons with the text fields */
-  padding-left: 90px; /* same size as the label elements */
+.button{
+  color: white;
+  padding: 10px 4px;
+  border-radius: 3px;
+  border:2px;
+  cursor: pointer;
+  float: right;
 }
 
-button {
-  /* This extra margin represent roughly the same space as the space
-     between the labels and their text fields */
-  margin-left: .5em;
+@media screen and (max-width: 600px) {
+  .left,.right input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }
